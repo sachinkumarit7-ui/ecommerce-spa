@@ -34,7 +34,7 @@ export function Header({ currentView, onViewChange }: HeaderProps) {
             <nav className="hidden md:flex space-x-8">
               <button
                 onClick={() => onViewChange('products')}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ₹{
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   currentView === 'products'
                     ? 'text-blue-600 bg-blue-50'
                     : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
@@ -44,7 +44,7 @@ export function Header({ currentView, onViewChange }: HeaderProps) {
               </button>
               <button
                 onClick={() => onViewChange('cart')}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors relative ₹{
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors relative ${
                   currentView === 'cart'
                     ? 'text-blue-600 bg-blue-50'
                     : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
@@ -100,7 +100,7 @@ export function Header({ currentView, onViewChange }: HeaderProps) {
               <div className="flex space-x-2">
                 <button
                   onClick={() => onViewChange('login')}
-                  className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ₹{
+                  className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
                     currentView === 'login'
                       ? 'text-blue-600 bg-blue-50'
                       : 'text-gray-600 hover:text-blue-600'
@@ -110,7 +110,7 @@ export function Header({ currentView, onViewChange }: HeaderProps) {
                 </button>
                 <button
                   onClick={() => onViewChange('signup')}
-                  className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ₹{
+                  className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
                     currentView === 'signup'
                       ? 'bg-blue-600 text-white'
                       : 'bg-blue-600 text-white hover:bg-blue-700'

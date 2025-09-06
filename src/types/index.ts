@@ -1,9 +1,3 @@
-export interface FilterOptions {
-  category: string;
-  minPrice: number;
-  maxPrice: number;
-  search: string;
-}
 
 export interface User {
   id: string;

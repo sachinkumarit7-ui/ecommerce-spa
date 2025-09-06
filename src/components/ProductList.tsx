@@ -14,7 +14,7 @@ export function ProductList() {
  const [filters, setFilters] = useState<FilterOptions>({
   category: 'all',
   minPrice: 0,
-  maxPrice: null, // no limit initially
+  maxPrice: 9999999999999, // no limit initially
   searchTerm: ''
 });
 
@@ -51,7 +51,7 @@ export function ProductList() {
   setFilters({
     category: 'all',
     minPrice: 0,
-    maxPrice: null,  // reset to no limit instead of 0
+    maxPrice: 9999999999999,  // reset to no limit instead of 0
     searchTerm: ''
   });
 };
@@ -196,11 +196,11 @@ export function ProductList() {
                   <h3 className="text-sm font-medium text-gray-900 mb-2">{product.name}</h3>
                   <p className="text-sm text-gray-600 mb-3 line-clamp-2">{product.description}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-gray-900">₹{product.price.toFixed(2)}</span>
+                    <span className="text-lg font-bold text-gray-900">${product.price.toFixed(2)}</span>
                     <button
                       onClick={() => handleAddToCart(product)}
                       disabled={!product.inStock}
-                      className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ₹{
+                      className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                         product.inStock
                           ? 'bg-blue-600 text-white hover:bg-blue-700'
                           : 'bg-gray-300 text-gray-500 cursor-not-allowed'
